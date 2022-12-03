@@ -4,7 +4,7 @@ import fs from 'fs'
 let handler = async (m, { conn, command, text }) => {
   let name = await conn.getName(m.sender)
   let who = m.mentionedJid && m.mentionedJid[0] ? m.mentionedJid[0] : m.fromMe ? conn.user.jid : m.sender
-  let pp = await conn.profilePictureUrl(who, 'image').catch((_) => "https://telegra.ph/file/a6b2ccf14c2007652faec.jpg")
+  let pp = await conn.profilePictureUrl(who, 'image').catch((_) => "https://telegra.ph/file/c30e61fb40b506e0d101d.jpg")
 await conn.sendButton(m.chat, `Halo juga kak ${name} Ada Yang ${await conn.getName(conn.user.jid)} Bisa Bantu?\n*Ini nomor bot yah bukan org*\n\nKlik Button Di bawah untuk memunculkan menu bot`,wm + '\n\n' + botdate, giflogo2, [['📌MENU','.menu']], m, {
 contextInfo: { externalAdReply :{
                         mediaUrl: sig,
